@@ -34,12 +34,16 @@
         <div id="root"></div>
         <p id="btn_plus">+</p>
         <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+        ></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script type="text/babel">
             console.log(React);
             console.log(ReactDOM);
 
+            /*
             // Define Class Component
             class ClassComponent extends React.Component {
                 render() {
@@ -59,6 +63,69 @@
 
             // Execute
             ReactDOM.render(<FunctionComponent2 />, document.querySelector("#root"));
+            */
+            /*--------------------------------------------------------------------------*/
+            /*
+            // 1. 태그 이름 문자열 type
+            // <h1>type이 "태그 이름 문자열"입니다.</h1>
+            ReactDOM.render(
+                React.createElement("h1", null, 'type이 "태그 이름 문자열"입니다.'),
+                document.querySelector("#root")
+            );
+
+            // 2. React component type
+            const Component = () => {
+                return React.createElement("p", null, 'type이 "React component"입니다.');
+            };
+            // <Component></Component> =>
+            ReactDOM.render(
+                React.createElement(Component, null, null),
+                document.querySelector("#root")
+            );
+
+            // 3. React.Fragment
+            // data를 배열형식으로 넣고 싶을 때 사용
+            ReactDOM.render(
+                React.createElement(
+                    React.Fragment,
+                    null,
+                    'type이 "React.Fragment"입니다.',
+                    'type이 "React.Fragment"입니다.',
+                    'type이 "React.Fragment"입니다.'
+                ),
+                document.querySelector("#root")
+            );
+
+            // 4. 복잡한 React Element 모임
+            // <div>
+            //     <div>
+            //         <h1>주제</h1>
+            //         <ul>
+            //             <li>React</li>
+            //             <li>Vue</li>
+            //         </ul>
+            //     </div>
+            // </div>
+            
+            ReactDOM.render(
+                React.createElement(
+                    "div",
+                    null,
+                    React.createElement(
+                        "div",
+                        null,
+                        React.createElement("h1", null, "주제"),
+                        React.createElement(
+                            "ul",
+                            null,
+                            React.createElement("li", null, "React"),
+                            React.createElement("li", null, "Vue")
+                        )
+                    )
+                ),
+                document.querySelector("#root")
+            );
+            */
         </script>
     </body>
 </html>
