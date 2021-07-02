@@ -134,10 +134,9 @@ export default function Prototypes() {
         <main>
             <div className="prototypes">
                 {prototypes.map(prototype => {
-                    const { id, thumbnail, title, price, desc, pieUrl } = prototype;
                     return (
-                        <div className="prototype" key={id}>
-                            <a href={pieUrl} target="_BLANK" rel="noreferrer">
+                        <div className="prototype" key={prototype.id}>
+                            <a href={prototype.pieUrl} target="_BLANK" rel="noreferrer">
                                 <div
                                     style={{
                                         padding: "25px 0px 25px 0px"
@@ -148,7 +147,7 @@ export default function Prototypes() {
                                         loop
                                         playsInline
                                         className="prototype__artwork prototype__edit"
-                                        src={thumbnail}
+                                        src={prototype.thumbnail}
                                         style={{
                                             objectFit: "contatin"
                                         }}
@@ -160,10 +159,10 @@ export default function Prototypes() {
                                     <div className="btn btn--primary float--right">
                                         <i className="icon icon--plus"></i>
                                     </div>
-                                    {title}
+                                    {prototype.title}
                                 </div>
-                                <p className="prototype__price">$ {price}</p>
-                                <p className="prototype__desc">{desc}</p>
+                                <p className="prototype__price">$ {prototype.price}</p>
+                                <p className="prototype__desc">{prototype.desc}</p>
                             </div>
                         </div>
                     );

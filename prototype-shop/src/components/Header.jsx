@@ -5,7 +5,11 @@ export default function Header() {
                 <div className="title">2021-하계 사전과제</div>
                 <div className="subtitle">쇼핑몰 예제</div>
                 <div className="btn__area">
-                    <a href="https://github.com/Sophoca/React" target="_BLANK" rel="noreferrer">
+                    <a
+                        href="https://github.com/Sophoca/React_Practice"
+                        target="_BLANK"
+                        rel="noreferrer"
+                    >
                         <button>Github</button>
                     </a>
                 </div>
