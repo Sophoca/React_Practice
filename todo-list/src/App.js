@@ -67,22 +67,24 @@ class App extends Component {
         const { input, todos } = this.state;
         const { handleChange, handleCreate, handleKeyPress, handleToggle, handleRemove } = this;
         return (
-            <TodoListTemplate
-                form={
-                    <Form
-                        value={input}
-                        onKeyPress={handleKeyPress}
-                        onChange={handleChange}
-                        onCreate={handleCreate}
-                    />
-                }
-            >
-                <TodoItemList
-                    todos={todos}
-                    onToggle={handleToggle}
-                    onRemove={handleRemove}
-                ></TodoItemList>
-            </TodoListTemplate>
+            <>
+                <TodoListTemplate
+                    form={
+                        <Form
+                            value={input}
+                            onKeyPress={handleKeyPress}
+                            onChange={handleChange}
+                            onCreate={handleCreate}
+                        />
+                    }
+                >
+                    <TodoItemList
+                        todos={todos}
+                        onToggle={handleToggle}
+                        onRemove={handleRemove}
+                    ></TodoItemList>
+                </TodoListTemplate>
+            </>
         );
     }
 }
